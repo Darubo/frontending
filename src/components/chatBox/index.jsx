@@ -14,7 +14,7 @@ const ChatBox = ({ user, messages = [], sendMessage }) => {
                         <img src={user.profilePicture?? userPlaceholder} className="img-fluid" id="user-logo-chat" />
                     </div>
                     <div className="col-8 text-start">
-                        <span className="blue-text">{user.name}</span>
+                        <span className="blue-text">{user.nome}</span>
                     </div>
                 </div>
                 <div className='chatBody w-100' style={{ backgroundColor: '#333' }}>
@@ -23,7 +23,7 @@ const ChatBox = ({ user, messages = [], sendMessage }) => {
                             return (
                                 <div className='row'>
                                     <div className='col text-white bg-secondary'>
-                                        <p>{user.name}:</p>
+                                        <p>{user.nome}:</p>
                                         <p>{message.message}</p>
                                     </div>
                                 </div>

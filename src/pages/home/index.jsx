@@ -18,7 +18,7 @@ const Home = () => {
     const context = useAuth();
 
     const handleSendMessage = (message) =>{
-        api.post('/message', {message, receiverId: selectedUser.id});
+        api.post('/messages', {message, receiverId: selectedUser.id});
         getSentMessages();
         getReceivedMessages();
     }

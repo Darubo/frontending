@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardTitle, CardText, Button } from 'reactstrap'
+import userPlaceholder from '../../assets/userplaceholder.png';
 
 function PresentationCard({ user, clickEvent }) {
   return (
@@ -15,8 +16,10 @@ function PresentationCard({ user, clickEvent }) {
           cursor: 'pointer'
         }}
       >
+        <img src={user.profilePicture?? userPlaceholder} className="img-fluid" id="user-logo-chat" />
         <CardTitle tag="h5">
-          {user.name}
+          {user.nome}
+
         </CardTitle>
         <CardText>
           {user.email}
