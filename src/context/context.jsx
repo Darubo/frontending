@@ -11,6 +11,7 @@ const getLoggedUser = async () => {
     await api.get(`user/${userId}`)
         .then((response) => {
             user = response.data;
+            console.log(user);
         });
 
     return user;
